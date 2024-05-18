@@ -7,7 +7,7 @@ import {
   MovimentosResponse,
   ProcessoResponse,
 } from './dto/response-processo.dtos';
-import { format } from 'date-fns';
+import { format, fromZonedTime } from 'date-fns-tz';
 
 @Injectable()
 export class ProcessoMapper {
@@ -24,6 +24,7 @@ export class ProcessoMapper {
     processoEntity.dataAjuizamento = source.dataAjuizamento;
     processoEntity.movimentacoes = this.toMovimentoEntity(source.movimentos);
     processoEntity.assuntos = source.assuntos.map((assunto) => assunto.nome);
+    processoEntity.dataCriacao = new Date();
     return processoEntity;
   }
 
@@ -52,6 +53,7 @@ export class ProcessoMapper {
 
   toProcessoResponse(processoEntity: ProcessoEntity): ProcessoResponse {
     const processoResponse = new ProcessoResponse();
+    processoResponse.codigoProcesso = processoEntity.codigoProcesso;
     processoResponse.classe = processoEntity.classe;
     processoResponse.sistema = processoEntity.sistema;
     processoResponse.formato = processoEntity.formato;

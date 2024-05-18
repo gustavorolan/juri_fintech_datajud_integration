@@ -21,7 +21,7 @@ export class ComplementoTabelado {
 }
 
 export class Movimento {
-  complementosTabelados: ComplementoTabelado[];
+  complementosTabelados: ComplementoTabelado[] = [];
   codigo: number;
   nome: string;
   dataHora: Date;

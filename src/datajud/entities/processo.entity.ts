@@ -46,5 +46,5 @@ export class ProcessoEntity {
   assuntos: string[];
 
   @Column({ type: 'timestamp' })
-  dataCriacao: Date = new Date();
+  dataCriacao: Date;
 }
