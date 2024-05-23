@@ -1,13 +1,12 @@
 FROM node:22.1.0 as builder
+WORKDIR /usr/src/app
 
-WORKDIR '/app'
-COPY . ./
-
+COPY package*.json ./
 RUN npm install
 
+COPY . .
 RUN npm run build
 
 EXPOSE 3000
-CMD ["npm", "run", "start"]
-
+CMD ["npm", "run", "start:prod"]
 
