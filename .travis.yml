@@ -11,7 +11,7 @@ before_install:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "tryout"
+  app: "tryout-v2"
   env: "Tryout-env"
   bucket_name: "elasticbeanstalk-us-east-1-830665105132"
   bucket_path: "tryout"
