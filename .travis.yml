@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t gustavo/datajud-integration -f Dockerfile.dev .
+  - docker build -t gustavo/datajud-integration -f Dockerfile .
 
 script:
   - docker run -e CI=true gustavo/datajud-integration npm run test -- --coverage
@@ -18,5 +18,5 @@ deploy:
   bucket_path: "tryout"
   on:
     branch: master
-  access_key_id: "$SECRET_ID"  
+  access_key_id: "$SECRET_ID"
   secret_access_key: "$SECRET_KEY"
