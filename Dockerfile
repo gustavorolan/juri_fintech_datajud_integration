@@ -1,8 +1,7 @@
 FROM node:22.1.0 as builder
 
 WORKDIR '/app'
-COPY package*.json .
-COPY . .
+COPY . ./
 
 RUN npm install
 
