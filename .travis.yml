@@ -20,6 +20,6 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-1-830665105132"
   bucket_path: "tryout"
   on:
-    branch: master
+    branch: main
   access_key_id: "$SECRET_ID"
   secret_access_key: "$SECRET_KEY"
