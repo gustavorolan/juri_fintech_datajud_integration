@@ -11,7 +11,7 @@ before_install:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "tryout-v2"
+  app: "tryout"
   env: "Tryout-env"
   bucket_name: "elasticbeanstalk-us-east-1-830665105132"
   bucket_path: "tryout"
@@ -19,3 +19,4 @@ deploy:
     branch: main
   access_key_id: "$SECRET_ID"
   secret_access_key: "$SECRET_KEY"
+  version_label: "v1.0.0"
