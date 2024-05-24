@@ -27,7 +27,7 @@ services:
       DATAJUD_API_KEY: ${DATAJUD_API_KEY}
       DATAJUD_API_URL: ${DATAJUD_API_URL}
     ports:
-      - '3000:3000'
+      - '80:3000'
     volumes:
       - ./src:/app/src
 
