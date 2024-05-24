@@ -10,7 +10,7 @@ before_install:
   - docker build -t gustavo/datajud-integration -f Dockerfile .
 
 script:
-  - docker run -e CI=true gustavo/docker-react npm run test:cov -- --coverage
+  - docker run -e CI=true gustavo/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
