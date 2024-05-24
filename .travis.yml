@@ -19,6 +19,7 @@ deploy:
   on:
     branch: main
   access_key_id: "$SECRET_ID"
-  secret_access_key: "$SECRET_KEY"
+  secret_access_key:
+    secure: "$SECRET_KEY"
   version_label: "v1.0.0"
   skip_cleanup: true
