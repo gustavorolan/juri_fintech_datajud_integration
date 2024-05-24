@@ -6,7 +6,11 @@ services:
   - docker
 
 before_install:
+  - sudo timedatectl set-timezone America/Sao_Paulo
   - docker build -t gustavo/datajud-integration -f Dockerfile .
+
+script:
+  - docker run -e CI=true gustavo/docker-react npm run test:cov -- --coverage
 
 deploy:
   provider: elasticbeanstalk
