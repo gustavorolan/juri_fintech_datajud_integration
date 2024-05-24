@@ -21,5 +21,3 @@ deploy:
   access_key_id: "$SECRET_ID"
   secret_access_key: "$SECRET_KEY"
   version_label: "v1.0.0"
-  skip_cleanup: true
-  edge: true
